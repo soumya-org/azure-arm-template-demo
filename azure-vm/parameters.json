@@ -6,13 +6,13 @@
             "value": "eastus"
         },
         "networkInterfaceName1": {
-            "value": "test-vm1144_z1"
+            "value": "testvm-1672_z1"
         },
         "enableAcceleratedNetworking": {
             "value": true
         },
         "networkSecurityGroupName": {
-            "value": "test-vm1-nsg"
+            "value": "testvm-1-nsg"
         },
         "networkSecurityGroupRules": {
             "value": [
@@ -35,7 +35,7 @@
             "value": "default"
         },
         "virtualNetworkName": {
-            "value": "test-vm1-vnet"
+            "value": "testvm-1-vnet"
         },
         "addressPrefixes": {
             "value": [
@@ -53,7 +53,7 @@
             ]
         },
         "publicIpAddressName1": {
-            "value": "test-vm1-ip"
+            "value": "testvm-1-ip"
         },
         "publicIpAddressType": {
             "value": "Static"
@@ -62,16 +62,16 @@
             "value": "Standard"
         },
         "pipDeleteOption": {
-            "value": "Delete"
+            "value": "Detach"
         },
         "virtualMachineName": {
-            "value": "test-vm1"
+            "value": "testvm-1"
         },
         "virtualMachineName1": {
-            "value": "test-vm1"
+            "value": "testvm-1"
         },
         "virtualMachineComputerName1": {
-            "value": "test-vm1"
+            "value": "testvm-1"
         },
         "virtualMachineRG": {
             "value": "azure-vm"
@@ -86,7 +86,7 @@
             "value": "Standard_D2s_v3"
         },
         "nicDeleteOption": {
-            "value": "Delete"
+            "value": "Detach"
         },
         "hibernationEnabled": {
             "value": false
@@ -95,9 +95,6 @@
             "value": "azureuser"
         },
         "adminPassword": {
-            "value": null
-        },
-        "customData": {
             "value": null
         },
         "securityType": {
