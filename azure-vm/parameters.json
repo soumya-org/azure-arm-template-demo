@@ -1,0 +1,107 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "networkInterfaceName1": {
+            "value": "test727_z1"
+        },
+        "networkSecurityGroupName": {
+            "value": "test-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "SSH",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "22"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkName": {
+            "value": "test-vnet"
+        },
+        "addressPrefixes": {
+            "value": [
+                "10.0.0.0/16"
+            ]
+        },
+        "subnets": {
+            "value": [
+                {
+                    "name": "default",
+                    "properties": {
+                        "addressPrefix": "10.0.0.0/24"
+                    }
+                }
+            ]
+        },
+        "publicIpAddressName1": {
+            "value": "test-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Static"
+        },
+        "publicIpAddressSku": {
+            "value": "Standard"
+        },
+        "pipDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineName": {
+            "value": "test"
+        },
+        "virtualMachineName1": {
+            "value": "test"
+        },
+        "virtualMachineComputerName1": {
+            "value": "test"
+        },
+        "virtualMachineRG": {
+            "value": "vm"
+        },
+        "osDiskType": {
+            "value": "Premium_LRS"
+        },
+        "osDiskDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B1s"
+        },
+        "nicDeleteOption": {
+            "value": "Delete"
+        },
+        "hibernationEnabled": {
+            "value": false
+        },
+        "adminUsername": {
+            "value": "azureuser"
+        },
+        "securityType": {
+            "value": "TrustedLaunch"
+        },
+        "secureBoot": {
+            "value": true
+        },
+        "vTPM": {
+            "value": true
+        },
+        "virtualMachine1Zone": {
+            "value": "1"
+        }
+    }
+}
