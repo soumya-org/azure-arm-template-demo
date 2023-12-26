@@ -34,10 +34,10 @@ jobs:
         run: |
           echo "${{ toJSON(fromJSON(steps.armttkvalidation.outputs.results)) }}"
       
-  #     - name: Login to Azure
-  #       uses: azure/login@v1
-  #       with:
-  #         creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
         
   #     - name: Validate ARM Template
   #       uses: Azure/arm-deploy@v1
