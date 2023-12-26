@@ -6,10 +6,13 @@
             "value": "eastus"
         },
         "networkInterfaceName1": {
-            "value": "test727_z1"
+            "value": "test-vm1144_z1"
+        },
+        "enableAcceleratedNetworking": {
+            "value": true
         },
         "networkSecurityGroupName": {
-            "value": "test-nsg"
+            "value": "test-vm1-nsg"
         },
         "networkSecurityGroupRules": {
             "value": [
@@ -32,7 +35,7 @@
             "value": "default"
         },
         "virtualNetworkName": {
-            "value": "test-vnet"
+            "value": "test-vm1-vnet"
         },
         "addressPrefixes": {
             "value": [
@@ -50,7 +53,7 @@
             ]
         },
         "publicIpAddressName1": {
-            "value": "test-ip"
+            "value": "test-vm1-ip"
         },
         "publicIpAddressType": {
             "value": "Static"
@@ -62,16 +65,16 @@
             "value": "Delete"
         },
         "virtualMachineName": {
-            "value": "test"
+            "value": "test-vm1"
         },
         "virtualMachineName1": {
-            "value": "test"
+            "value": "test-vm1"
         },
         "virtualMachineComputerName1": {
-            "value": "test"
+            "value": "test-vm1"
         },
         "virtualMachineRG": {
-            "value": "vm"
+            "value": "azure-vm"
         },
         "osDiskType": {
             "value": "Premium_LRS"
@@ -80,7 +83,7 @@
             "value": "Delete"
         },
         "virtualMachineSize": {
-            "value": "Standard_B1s"
+            "value": "Standard_D2s_v3"
         },
         "nicDeleteOption": {
             "value": "Delete"
@@ -90,6 +93,12 @@
         },
         "adminUsername": {
             "value": "azureuser"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "customData": {
+            "value": null
         },
         "securityType": {
             "value": "TrustedLaunch"
