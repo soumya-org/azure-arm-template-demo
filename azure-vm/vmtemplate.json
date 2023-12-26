@@ -8,6 +8,9 @@
         "networkInterfaceName1": {
             "type": "string"
         },
+        "enableAcceleratedNetworking": {
+            "type": "bool"
+        },
         "networkSecurityGroupName": {
             "type": "string"
         },
@@ -68,6 +71,12 @@
         "adminUsername": {
             "type": "string"
         },
+        "adminPassword": {
+            "type": "secureString"
+        },
+        "customData": {
+            "type": "secureString"
+        },
         "securityType": {
             "type": "string"
         },
@@ -116,9 +125,14 @@
                         }
                     }
                 ],
+                "enableAcceleratedNetworking": "[parameters('enableAcceleratedNetworking')]",
                 "networkSecurityGroup": {
                     "id": "[variables('nsgId')]"
                 }
+            },
+            "tags": {
+                "Env": "prod",
+                "Implementor": "soumya"
             }
         },
         {
@@ -128,6 +142,10 @@
             "location": "[parameters('location')]",
             "properties": {
                 "securityRules": "[parameters('networkSecurityGroupRules')]"
+            },
+            "tags": {
+                "Env": "prod",
+                "Implementor": "soumya"
             }
         },
         {
@@ -140,6 +158,10 @@
                     "addressPrefixes": "[parameters('addressPrefixes')]"
                 },
                 "subnets": "[parameters('subnets')]"
+            },
+            "tags": {
+                "Env": "prod",
+                "Implementor": "soumya"
             }
         },
         {
@@ -155,7 +177,11 @@
             },
             "zones": [
                 "[parameters('virtualMachine1Zone')]"
-            ]
+            ],
+            "tags": {
+                "Env": "prod",
+                "Implementor": "soumya"
+            }
         },
         {
             "name": "[parameters('virtualMachineName1')]",
@@ -200,9 +226,13 @@
                 "osProfile": {
                     "computerName": "[parameters('virtualMachineComputerName1')]",
                     "adminUsername": "[parameters('adminUsername')]",
+                    "adminPassword": "[parameters('adminPassword')]",
                     "linuxConfiguration": {
-                        "disablePasswordAuthentication": true
-                    }
+                        "patchSettings": {
+                            "patchMode": "ImageDefault"
+                        }
+                    },
+                    "customData": "[parameters('customData')]"
                 },
                 "securityProfile": {
                     "securityType": "[parameters('securityType')]",
@@ -216,6 +246,10 @@
                         "enabled": true
                     }
                 }
+            },
+            "tags": {
+                "Env": "prod",
+                "Implementor": "soumya"
             },
             "zones": [
                 "[parameters('virtualMachine1Zone')]"
