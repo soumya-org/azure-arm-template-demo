@@ -3,7 +3,9 @@ name: Virtual Machine CICD
 on:
   push:
     branches: [ main ]
-    paths: azure-vm/**
+    paths: 
+      - azure-vm/**
+      - .github/workflows/azure-vms-arm-deploy.yml
   pull_request:
     branches: [ main ]    
     paths: VM/**
