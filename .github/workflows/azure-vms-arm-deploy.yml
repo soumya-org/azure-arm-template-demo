@@ -92,7 +92,7 @@ jobs:
           subscriptionId: ${{ secrets.SUBSCRIPTION_ID }}
           region: ${{ env.region }}
           resourceGroupName: ${{ env.regGroup }}
-          template: template.json
+          template: azure-vm/vmtemplate.json
           deploymentMode: Incremental
           parameters: parameters.json adminPassword=${{ secrets.VM_PASSWORD}}
             
