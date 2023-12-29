@@ -1,0 +1,65 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "existingResourceGroupName": {
+            "value": "azure-vm"
+        },
+        "existingStorageAccountName": {
+            "value": "fileteststorageacc"
+        },
+        "existingFileShareName": {
+            "value": "testfs"
+        },
+        "vaultName": {
+            "value": "vault-lqqgq5cw"
+        },
+        "policyName": {
+            "value": "DailyPolicy-lqqgq5ms"
+        },
+        "registerStorageAccount": {
+            "value": true
+        },
+        "location": {
+            "value": "eastus"
+        },
+        "isNewVault": {
+            "value": true
+        },
+        "isNewPolicy": {
+            "value": true
+        },
+        "policyProperties": {
+            "value": {
+                "backupManagementType": "AzureStorage",
+                "timeZone": "UTC",
+                "schedulePolicy": {
+                    "schedulePolicyType": "SimpleSchedulePolicy",
+                    "scheduleRunFrequency": "Daily",
+                    "scheduleRunTimes": [
+                        "2023-12-29T19:30:00.000Z"
+                    ],
+                    "scheduleWeeklyFrequency": 0,
+                    "scheduleRunDays": []
+                },
+                "retentionPolicy": {
+                    "retentionPolicyType": "LongTermRetentionPolicy",
+                    "dailySchedule": {
+                        "retentionTimes": [
+                            "2023-12-29T19:30:00.000Z"
+                        ],
+                        "retentionDuration": {
+                            "count": 30,
+                            "durationType": "Days"
+                        }
+                    },
+                    "weeklySchedule": null,
+                    "monthlySchedule": null,
+                    "yearlySchedule": null
+                },
+                "protectedItemsCount": 0,
+                "workloadType": "AzureFileShare"
+            }
+        }
+    }
+}
